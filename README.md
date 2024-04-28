@@ -9,7 +9,7 @@ Open the HTML file in your browser.
 
 Select the network. It works for Mainnet, Testnet and Devnet.
 
-It allows to create a Mainnet account (which has to be activated later with XRP).
+It allows to create a Mainnet account (which has to be activated later with XRP). Do it offline, it's purely mathematical.
 
 It allows to create a Testnet or Devent account and funds it with 100 XRP.
 
