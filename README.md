@@ -14,3 +14,5 @@ It allows to create a Mainnet account (which has to be activated later with XRP)
 It allows to create a Testnet or Devent account and funds it with 100 XRP. Do it online as it's not real XRP for test nets.
 
 It allows to send XRP.
+
+You can try it here: https://skunk-proper-smoothly.ngrok-free.app/tools/simpleXRPwallet/xrpwallet
