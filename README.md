@@ -1,7 +1,7 @@
 # Simple-XRP-Wallet
 A simple javascript XRP wallet to check the balance and send XRP.
 
-Download both files: xrpwallet.js xrpwallet.html
+Download both files in a folder: xrpwallet.js xrpwallet.html
 
 To install the required library: npm install xrpl
 
