@@ -1,0 +1,116 @@
+<html>
+  <head>
+    <title>XRPL WALLET</title>
+    <link href='https://fonts.googleapis.com/css?family=Work Sans' rel='stylesheet'>
+    <style>
+       body{font-family: "Work Sans", sans-serif;padding: 20px;background: #fafafa;}
+       h1{font-weight: bold;}
+       input, button {padding: 6px;margin-bottom: 8px;}
+       button{font-weight: bold;font-family: "Work Sans", sans-serif;}
+       td{vertical-align: middle;}
+    </style>
+    <script src='https://unpkg.com/xrpl@2.7.0/build/xrpl-latest-min.js'></script>
+    <script src='xrpwallet.js'></script>
+    <script>
+      if (typeof module !== "undefined") {
+        const xrpl = require('xrpl')
+      }
+
+    </script>
+  </head>
+  
+<!-- ************************************************************** -->
+<!-- ********************** The Form ****************************** -->
+<!-- ************************************************************** -->
+
+  <body>
+    <h1>XRPL WALLET</h1>
+    <form id="theForm">
+      Choose:  
+      &nbsp;&nbsp;
+      <input type="radio" id="tn" name="server"
+        value="wss://s.altnet.rippletest.net:51233" checked>
+      <label for="testnet">Testnet</label>
+      &nbsp;&nbsp;
+      <input type="radio" id="dn" name="server"
+        value="wss://s.devnet.rippletest.net:51233">
+      <label for="devnet">Devnet</label>
+      &nbsp;&nbsp;
+      <input type="radio" id="mn" name="server"
+        value="wss://xrplcluster.com">
+      <label for="mainnet">Mainnet</label>
+      <br/><br/>
+      <button type="button" onClick="getAccountsFromSeeds()">Get Account from Seed:
+      </button>
+      <br/>
+      <textarea id="seeds" cols="40" rows= "1"></textarea>
+      <br/><br/>
+      <button type="button" onClick="getAccount('standby')">(or create a Testnet/Devnet account)</button>
+      &nbsp;&nbsp;
+      <button type="button" onClick="getAccount2('standby')">(or create a Mainnet account)</button>
+      <table>
+        <tr valign="top">
+          <td>
+            <table>
+              <tr valign="top">
+                <td>
+                  <table>
+                    <tr valign="top">
+                      <td align="right">
+                        Account
+                      </td>
+                      <td>
+                        <input type="text" id="standbyAccountField" size="40"></input>
+                        <br>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="right">
+                        Seed
+                      </td>
+                      <td>
+                        <input type="text" id="standbySeedField" size="40"></input>
+                        <br>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="right">
+                        XRP Balance
+                      </td>
+                      <td>
+                        <input type="text" id="standbyBalanceField" size="40"></input>
+                        <br>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="right">
+                        Amount
+                      </td>
+                      <td>
+                        <input type="text" id="standbyAmountField" size="40"></input>
+                        <br>
+                      </td>
+                    </tr>
+                   <tr>
+                      <td align="right">
+                        Destination
+                      </td>
+                      <td>
+                        <input type="text" id="standbyDestinationField" size="40"></input>
+                        <br>
+                      </td>
+                    </tr>
+                  </table>
+                  <button type="button" onClick="sendXRP()">Send XRP</button>
+                  <p align="right">
+                    <textarea id="standbyResultField" cols="80" rows="20" ></textarea>
+                  </p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
