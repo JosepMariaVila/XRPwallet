@@ -1,5 +1,5 @@
 # Simple-XRP-Wallet
-A simple javascript XRP wallet to check balances and send XRP through an HTML file.
+A simple javascript XRP wallet to check the balance and send XRP.
 
 Download both files: xrpwallet.js xrpwallet.html
 
@@ -7,7 +7,7 @@ To install the required library: npm install xrpl
 
 Open the HTML file in your browser.
 
-Select the netwrok. It works for Mainnet, Testnet and Devnet.
+Select the network. It works for Mainnet, Testnet and Devnet.
 
 It allows to create a Mainnet account (which has to be activated later with XRP).
 
