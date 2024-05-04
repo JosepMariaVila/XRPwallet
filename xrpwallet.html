@@ -46,9 +46,9 @@
       <br/>
       <textarea id="seeds" cols="40" rows= "1"></textarea>
       <br/><br/>
-      <button type="button" onClick="getAccount('standby')">(or create a Testnet/Devnet account)</button>
+      <button type="button" onClick="getAccount()">(or create a Testnet/Devnet account)</button>
       &nbsp;&nbsp;
-      <button type="button" onClick="getAccount2('standby')">(or create a Mainnet account)</button>
+      <button type="button" onClick="getAccount2()">(or create a Mainnet account)</button>
       <table>
         <tr valign="top">
           <td>
@@ -102,6 +102,8 @@
                       </td>
                     </tr>
                   </table>
+                  <button type="button" onClick="reload()">Clear fields</button>
+                  <br/>
                   <button type="button" onClick="sendXRP()">Send XRP</button>
                   <p align="right">
                     <textarea id="standbyResultField" cols="80" rows="20" ></textarea>
