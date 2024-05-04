@@ -12,6 +12,14 @@ function getNet() {
   return net;
 } // End of getNet()
 
+// ******************** GET ALGORITHM ********
+function getAlgo() {
+  let algo;
+  if (document.getElementById("secp").checked) algo = "secp256k1";
+  if (document.getElementById("ed").checked) algo = "ed25519";
+  return algo;
+} // End of getAlgo()
+
 // *******************************************************
 // ************* Create Testnet Devent Account ***********
 // *******************************************************
@@ -89,8 +97,11 @@ async function getAccountsFromSeeds() {
   standbyResultField.value = results;
 
   // -------------------------------------------------Find the test account wallets.
-  var lines = seeds.value.split("\n");
-  const standby_wallet = xrpl.Wallet.fromSeed(lines[0]);
+  let algo = getAlgo();
+
+  const standby_wallet = xrpl.Wallet.fromSeed(seeds.value, {
+    algorithm: algo,
+  });
 
   // -------------------------------------------------------Get the current balance.
   const standby_balance = await client.getXrpBalance(standby_wallet.address);
@@ -98,9 +109,7 @@ async function getAccountsFromSeeds() {
   // ----------------------Populate the fields for Standby account.
   standbyAccountField.value = standby_wallet.address;
   standbySeedField.value = standby_wallet.seed;
-  standbyBalanceField.value = await client.getXrpBalance(
-    standby_wallet.address
-  );
+  standbyBalanceField.value = standby_balance;
   standbyAmountField.value = "";
   standbyDestinationField.value = "";
 
@@ -121,8 +130,11 @@ async function sendXRP() {
 
   results += "\nConnected. Sending XRP.";
   standbyResultField.value = results;
+  let algo = getAlgo();
 
-  const standby_wallet = xrpl.Wallet.fromSeed(standbySeedField.value);
+  const standby_wallet = xrpl.Wallet.fromSeed(standbySeedField.value, {
+    algorithm: algo,
+  });
   const sendAmount = standbyAmountField.value;
 
   results += "\nSending from account: " + standby_wallet.address;
@@ -138,10 +150,10 @@ async function sendXRP() {
 
   // ------------------------------------------------- Sign prepared instructions
   const signed = standby_wallet.sign(prepared);
-
+  console.log(signed);
   // -------------------------------------------------------- Submit signed blob
   const tx = await client.submitAndWait(signed.tx_blob);
-
+  console.log(tx);
   results +=
     "\nBalance changes: " +
     JSON.stringify(xrpl.getBalanceChanges(tx.result.meta), null, 2);

@@ -27,10 +27,10 @@
   <body>
     <h1>XRP WALLET</h1>
     <form id="theForm">
-      Choose:  
+      Choose Net:  
       &nbsp;&nbsp;
       <input type="radio" id="tn" name="server"
-        value="wss://s.altnet.rippletest.net:51233" checked>
+        value="wss://s.altnet.rippletest.net:51233">
       <label for="testnet">Testnet</label>
       &nbsp;&nbsp;
       <input type="radio" id="dn" name="server"
@@ -40,6 +40,15 @@
       <input type="radio" id="mn" name="server"
         value="wss://xrplcluster.com">
       <label for="mainnet">Mainnet</label>
+      <br/><br/>
+      Choose Algo:  
+      &nbsp;&nbsp;
+      <input type="radio" id="secp" name="algorit" value="secp256k1">
+      <label for="secpp">Secp256k1 (29 characters seeds)</label>
+      &nbsp;&nbsp;
+      <input type="radio" id="ed" name="algorit" value="ed25519">
+      <label for="dedd">Ed25519 (31 characters seeds)</label>
+      &nbsp;&nbsp;
       <br/><br/>
       <button type="button" onClick="getAccountsFromSeeds()">Get Account from Seed:
       </button>
