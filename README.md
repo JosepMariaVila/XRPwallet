@@ -1,5 +1,5 @@
 # Simple-XRP-Wallet
-A simple javascript XRP wallet to check the balance,send XRP, create new mainnet accounts offline and create testnet funded accounts.
+A simple javascript XRP wallet to check the balance, send XRP, create new mainnet accounts offline and create testnet funded accounts.
 
 Download both files in a folder: xrpwallet.js xrpwallet.html
 
