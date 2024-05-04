@@ -1,9 +1,7 @@
 # Simple-XRP-Wallet
 A simple javascript XRP wallet to check the balance, send XRP, create new mainnet accounts offline and create testnet funded accounts.
 
-Download both files in a folder: xrpwallet.js xrpwallet.html
-
-To install the required library: npm install xrpl
+Download the following files in a folder: xrpwallet.js xrpwallet.html xrpl-latest-min.js xrpl.latest.js
 
 Open the HTML file in your browser.
 
