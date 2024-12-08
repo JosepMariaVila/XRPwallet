@@ -19,6 +19,6 @@ Step by step guide to set up the wallet:
  
 5) It allows to create a Testnet or Devent account and funds it with 100 XRP. Do it online as it's not real XRP.
 
-6) It allows to send XRP.
+6) It allows to send XRP. Warning: if you sign and send a transaction in the same computer, as it has internet conection, we can consider the private key compromised once broadcasted the transaction. So, each time you send XRP using this wallet you should generate a new keyparir using a computer that never is connected to the internet and send your XRP there.
 
 You can try it here: https://skunk-proper-smoothly.ngrok-free.app/tools/simpleXRPwallet/xrpwallet
