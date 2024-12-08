@@ -21,4 +21,5 @@ Step by step guide to set up the wallet:
 
 6) It allows to send XRP. Warning: if you sign and send a transaction in the same computer, as it has internet conection, we can consider the private key compromised once broadcasted the transaction. So, each time you send XRP using this wallet you should generate a new keyparir using a computer that never is connected to the internet and send your XRP there.
 
-Demo online just for educational purposes here: https://skunk-proper-smoothly.ngrok-free.app/tools/simpleXRPwallet/xrpwallet
+Demo online just for educational purposes here: 
+https://skunk-proper-smoothly.ngrok-free.app/tools/simpleXRPwallet/xrpwallet
