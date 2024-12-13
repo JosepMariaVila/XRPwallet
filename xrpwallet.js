@@ -12,13 +12,18 @@ function getNet() {
   return net;
 } // End of getNet()
 
-// ******************** GET ALGORITHM ********
+
+// ******************************************************
+// ******************** GET ALGORITHM *******************
+// ******************************************************
+
 function getAlgo() {
   let algo;
-  if (document.getElementById("secp").checked) algo = "secp256k1";
+  if (document.getElementById("secp").checked) algo = "ecdsa-secp256k1";
   if (document.getElementById("ed").checked) algo = "ed25519";
   return algo;
 } // End of getAlgo()
+
 
 // *******************************************************
 // ************* Create Testnet Devent Account ***********
@@ -64,12 +69,14 @@ async function getAccount() {
   client.disconnect();
 } // End of getAccount()
 
+
 // *******************************************************
 // ************* Create XRP Mainnet Account **************
 // *******************************************************
 
 async function getAccount2() {
-  const wallet = xrpl.Wallet.generate("ed25519");
+  let algo = getAlgo();
+  const wallet = xrpl.Wallet.generate(algo);
   console.log(wallet);
 
   standbyResultField.value =
@@ -82,6 +89,7 @@ async function getAccount2() {
   standbyAmountField.value = "";
   standbyDestinationField.value = "";
 } // End of getAccount2()
+
 
 // *******************************************************
 // ********** Get Accounts from Seeds ********************
@@ -118,6 +126,7 @@ async function getAccountsFromSeeds() {
   }
   client.disconnect();
 } // End of getAccountsFromSeeds()
+
 
 // *******************************************************
 // ******************** Send XRP *************************
@@ -167,6 +176,7 @@ async function sendXRP() {
   );
   client.disconnect();
 } // End of sendXRP()
+
 
 async function reload() {
   window.location.reload();
