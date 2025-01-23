@@ -26,7 +26,7 @@ function getAlgo() {
 
 
 // *******************************************************
-// ************* Create Testnet Devent Account ***********
+// ************* Create Testnet Devnet Account ***********
 // *******************************************************
 
 async function getAccount() {
