@@ -1,5 +1,5 @@
 # XRPWallet
-An XRP wallet to create new mainnet accounts offline (you can create accounts using the ed2551 algorithm or the secp256k1 algortihm), create testnet funded accounts (this has to be done online), check balances and send XRP.
+An XRP wallet to create new mainnet accounts offline (you can create accounts using the ed25519 algorithm or the secp256k1 algortihm), create testnet funded accounts (this has to be done online), check balances and send XRP.
 
 Regarding mainnet, it uses a seed to derive the account address and sign transactions, 2 options are possible:
 
