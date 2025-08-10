@@ -11,7 +11,7 @@ Step by step guide to set up the wallet:
 
 1) Create an empty folder in your desktop and download the 4 files.
 
-2) Open the HTML file in your browser.
+2) Open the HTML file in your browser (xrpwallet.html).
 
 3) Select the network. It works for Mainnet, Testnet and Devnet.
 
