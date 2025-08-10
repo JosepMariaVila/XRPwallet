@@ -9,7 +9,7 @@ Option B: 31 characters seeds (sKdNVBLAmVjgcDrEfDSzTSBqsagHMEd) which correspond
 
 Step by step guide to set up the wallet:
 
-1) Create an empty folder in your desktop and download the 4 files.
+1) Create an empty folder in your desktop and download the 6 files (or just download the folder from github and unzip it).
 
 2) Open the HTML file in your browser (xrpwallet.html).
 
